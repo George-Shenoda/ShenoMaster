@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
                 port: "",
             },
             {
-                hostname: "curious-albatross-386.convex.cloud",
+                hostname: "friendly-gnu-476.convex.cloud",
                 protocol: "https",
                 port: "",
             },
