@@ -8,7 +8,6 @@ import { Metadata } from "next";
 import { cacheLife, cacheTag } from "next/cache";
 import { api } from "@/convex/_generated/api";
 import { fetchQuery } from "convex/nextjs";
-import { connection } from "next/server";
 
 export const metadata: Metadata = {
     title: "Blog | ShenoMaster",
@@ -40,10 +39,9 @@ const BlogPage = () => {
 export default BlogPage;
 
 const BlogCard = async () => {
-    // "use cache";
-    // cacheLife("hours");
-    // cacheTag("blog");
-    await connection()
+    "use cache";
+    cacheLife("hours");
+    cacheTag("blog");
     const data = await fetchQuery(api.posts.getPosts);
     return (
         <>
